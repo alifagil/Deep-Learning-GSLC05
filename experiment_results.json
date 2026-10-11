@@ -1,0 +1,58 @@
+{
+    "dataset": {
+        "name": "OxfordIIITPet",
+        "selected_classes": 10,
+        "total_images": 996,
+        "train_images": 697,
+        "val_images": 149,
+        "test_images": 150
+    },
+    "experiments": {
+        "B1_ResNet18_Scratch": {
+            "strategy": "From Scratch",
+            "total_parameters": 11181642,
+            "trainable_parameters": 11181642,
+            "training_time_seconds": 98.27,
+            "test_loss": 1.8331,
+            "test_accuracy": 0.36,
+            "test_macro_f1": 0.3395
+        },
+        "B2_ResNet18_Feature_Extraction": {
+            "strategy": "Feature Extraction",
+            "total_parameters": 11181642,
+            "trainable_parameters": 5130,
+            "training_time_seconds": 89.92,
+            "test_loss": 0.2055,
+            "test_accuracy": 0.9867,
+            "test_macro_f1": 0.9867
+        },
+        "B3_ResNet18_Progressive_Fine_Tuning": {
+            "strategy": "Progressive Fine-Tuning",
+            "total_parameters": 11181642,
+            "trainable_parameters": 8398858,
+            "training_time_seconds": 56.8,
+            "test_loss": 0.1044,
+            "test_accuracy": 0.9867,
+            "test_macro_f1": 0.9866
+        },
+        "B4_Data_Augmentation": {
+            "without_augmentation": {
+                "test_accuracy": 0.98,
+                "test_macro_f1": 0.97998
+            },
+            "with_augmentation": {
+                "test_accuracy": 0.9733,
+                "test_macro_f1": 0.9735
+            }
+        },
+        "B5_EfficientNet_B0": {
+            "strategy": "Feature Extraction",
+            "total_parameters": 4020358,
+            "trainable_parameters": 12810,
+            "training_time_seconds": 89.42,
+            "test_loss": 0.1353,
+            "test_accuracy": 0.9733,
+            "test_macro_f1": 0.9733
+        }
+    }
+}
